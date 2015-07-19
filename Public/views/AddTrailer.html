@@ -1,0 +1,20 @@
+<div ng-controller="AddTrailerController as vm">
+	<br />
+	<form class="well container" ng-submit="vm.addNewTrailer()">
+		<div class="form-group">
+			<label for="">Name</label>
+			<input class="form-control" placeholder="Name..." ng-model="vm.newTrailer.name">
+		</div>
+		<div class="form-group">
+			<label for="">Studio</label>
+			<input class="form-control" placeholder="Studio..." ng-model="vm.newTrailer.studio">
+		</div>
+		<div class="form-group">
+			<label for="">Link</label>
+			<input class="form-control" placeholder="Link..." ng-model="vm.newTrailer.link">
+		</div>
+		<div class="center">
+			<button type="submit" class="btn btn-lg btn-info center">Submit</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,12 @@
+<div ng-controller="HomeController as vm">
+
+	<h1>{{vm.title}}</h1>
+	<br/>
+	<div ng-repeat= "trailer in vm.trailers">
+		<div class="well container center">
+			<h2>{{trailer.name}}</h2>
+			<h3>{{trailer.studio}}</h3>
+			<h3>{{trailer.link}}</h3>
+		</div>
+	</div>
+</div>
