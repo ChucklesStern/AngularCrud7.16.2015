@@ -2,12 +2,12 @@
 	'use strict';
 	angular.module('app').factory('HomeFactory' , HomeFactory);
 
-	HomeFactory.$inject = ['$http', '$q'];
+	HomeFactory.$inject = ['$http', '$q', '$sce'];
 	
 
 	
 
-	function HomeFactory($http, $q) {
+	function HomeFactory($http, $q, $sce) {
 		var firebase = 'https://e3trailers.firebaseio.com/';
 		var o = {};
 		o.trailers = [];
@@ -15,6 +15,7 @@
 		var getTrailers = function() {
 			$http.get(firebase + '.json').success(function(res) {
 				for(var prop in res) {
+					res[prop].link = $sce.trustAsResourceUrl(res[prop].link);
 					res[prop].id = prop;
 					o.trailers.push(res[prop]);
 				}

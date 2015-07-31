@@ -6,7 +6,7 @@
 		<div class="well container center">
 			<h2>{{trailer.name}}</h2>
 			<h3>{{trailer.studio}}</h3>
-			<h3>{{trailer.link}}</h3>
+			<iframe width="300" height="250" ng-src={{trailer.link}} ></iframe>
 			<button class = "btn btn-danger" ng-click="vm.removeTrailer(trailer)">Delete</button>
 			<button class = "btn btn-danger" ng-click="vm.editPage(trailer.id)">Edit</button>
 		</div>
